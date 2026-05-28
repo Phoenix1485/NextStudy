@@ -1,0 +1,2 @@
+"""Tests fuer NextStudy."""
+
