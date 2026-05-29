@@ -1,0 +1,37 @@
+NextStudy Lite - Lernplan für englisch
+========================================
+
+Tag 1: gdfgdf
+Aufgabe: gdfgdf intensiv lernen, Aufgaben üben und Fehler notieren
+Dauer: 30 Minuten
+Status: abgeschlossen
+
+Tag 2: gdfgdf
+Aufgabe: gdfgdf intensiv lernen, Aufgaben üben und Fehler notieren
+Dauer: 30 Minuten
+Status: offen
+
+Tag 3: gdfgdf
+Aufgabe: gdfgdf intensiv lernen, Aufgaben üben und Fehler notieren
+Dauer: 30 Minuten
+Status: offen
+
+Tag 4: rtr
+Aufgabe: rtr lernen, Beispiele anschauen und Aufgaben lösen
+Dauer: 30 Minuten
+Status: offen
+
+Tag 5: rtr
+Aufgabe: rtr lernen, Beispiele anschauen und Aufgaben lösen
+Dauer: 30 Minuten
+Status: offen
+
+Tag 6: Prüfungsvorbereitung
+Aufgabe: Schwächen wiederholen, Zusammenfassung lesen und Beispielaufgaben lösen
+Dauer: 30 Minuten
+Status: offen
+
+Tag 7: Wiederholung
+Aufgabe: Alle Themen wiederholen, offene Fragen klären und Mini-Selbsttest machen
+Dauer: 30 Minuten
+Status: offen

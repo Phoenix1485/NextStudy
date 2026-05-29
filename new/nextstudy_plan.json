@@ -1,0 +1,83 @@
+{
+    "fach": "englisch",
+    "tage": 7,
+    "lernzeit": 30,
+    "themen": [
+        {
+            "name": "ghhf",
+            "schwierigkeit": "leicht",
+            "gewichtung": 1
+        },
+        {
+            "name": "bfhg",
+            "schwierigkeit": "leicht",
+            "gewichtung": 1
+        },
+        {
+            "name": "rtr",
+            "schwierigkeit": "mittel",
+            "gewichtung": 2
+        },
+        {
+            "name": "gfgd",
+            "schwierigkeit": "mittel",
+            "gewichtung": 2
+        },
+        {
+            "name": "gdfgdf",
+            "schwierigkeit": "schwer",
+            "gewichtung": 3
+        }
+    ],
+    "plan": [
+        {
+            "tag": 1,
+            "thema": "gdfgdf",
+            "aufgabe": "gdfgdf intensiv lernen, Aufgaben üben und Fehler notieren",
+            "dauer": 30,
+            "status": "abgeschlossen"
+        },
+        {
+            "tag": 2,
+            "thema": "gdfgdf",
+            "aufgabe": "gdfgdf intensiv lernen, Aufgaben üben und Fehler notieren",
+            "dauer": 30,
+            "status": "offen"
+        },
+        {
+            "tag": 3,
+            "thema": "gdfgdf",
+            "aufgabe": "gdfgdf intensiv lernen, Aufgaben üben und Fehler notieren",
+            "dauer": 30,
+            "status": "offen"
+        },
+        {
+            "tag": 4,
+            "thema": "rtr",
+            "aufgabe": "rtr lernen, Beispiele anschauen und Aufgaben lösen",
+            "dauer": 30,
+            "status": "offen"
+        },
+        {
+            "tag": 5,
+            "thema": "rtr",
+            "aufgabe": "rtr lernen, Beispiele anschauen und Aufgaben lösen",
+            "dauer": 30,
+            "status": "offen"
+        },
+        {
+            "tag": 6,
+            "thema": "Prüfungsvorbereitung",
+            "aufgabe": "Schwächen wiederholen, Zusammenfassung lesen und Beispielaufgaben lösen",
+            "dauer": 30,
+            "status": "offen"
+        },
+        {
+            "tag": 7,
+            "thema": "Wiederholung",
+            "aufgabe": "Alle Themen wiederholen, offene Fragen klären und Mini-Selbsttest machen",
+            "dauer": 30,
+            "status": "offen"
+        }
+    ]
+}
