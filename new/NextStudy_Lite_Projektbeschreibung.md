@@ -1,526 +1,135 @@
-# NextStudy Lite – Projektbeschreibung LF5
+# NextStudy - Projektbeschreibung
 
-## 1. Projektname
+## Kurzbeschreibung
 
-**NextStudy Lite**
+NextStudy ist ein kleines Python-Programm für die Konsole. Es erstellt aus mehreren Lernthemen automatisch einen Lernplan. Man gibt ein Fach, die Themen, die Schwierigkeit, die verfügbaren Lerntage und die Lernzeit pro Tag ein.
 
-## 2. Kurzbeschreibung
+Danach erzeugt das Programm für jeden Tag eine Aufgabe. Der Plan kann angezeigt, gespeichert, geladen und als Textdatei exportiert werden. Außerdem kann man Aufgaben abhaken und sich den Fortschritt anzeigen lassen.
 
-NextStudy Lite ist ein lokales Python-Konsolenprogramm, das aus wenigen Eingaben automatisch einen Lernplan erstellt.
+## Ziel
 
-Der Nutzer gibt ein:
-
-- Fach
-- Lernthemen
-- Schwierigkeit pro Thema
-- Anzahl der verfügbaren Lerntage
-- tägliche Lernzeit
-
-Das Programm erstellt daraus einen einfachen Lernplan, zeigt diesen an, erlaubt das Abhaken erledigter Aufgaben und berechnet den Lernfortschritt.
-
-Das Projekt ist bewusst klein gehalten, damit es realistisch in **maximal 300 Zeilen Python-Code** umgesetzt werden kann.
-
----
-
-## 3. Ziel des Projekts
-
-Ziel ist ein funktionsfähiges Python-Tool, das Lernende beim Planen ihrer Lernzeit unterstützt.
+Das Ziel war ein Programm, das nicht zu groß wird, aber trotzdem einen echten Nutzen hat. Es soll beim Lernen helfen, indem es aus vielen Themen einen einfachen Tagesplan macht.
 
 Das Programm soll:
 
-- Lernstoff strukturieren
-- Themen nach Schwierigkeit gewichten
-- Themen auf Lerntage verteilen
-- Aufgaben anzeigen
-- Fortschritt berechnen
-- optional den Plan als JSON-Datei speichern und laden
+- Lernstoff ordnen,
+- schwere Themen stärker gewichten,
+- Aufgaben auf Lerntage verteilen,
+- Wiederholung einplanen,
+- Fortschritt anzeigen,
+- den Plan speichern und wieder laden.
 
----
+## Dateien der Abgabe
 
-## 4. Warum ist das Projekt nützlich?
-
-Viele Schüler und Auszubildende lernen unstrukturiert oder fangen zu spät an.  
-NextStudy Lite hilft dabei, aus mehreren Themen einen klaren Tagesplan zu machen.
-
-Beispiel:
+Die wichtigsten Dateien sind:
 
 ```text
-Fach: Chemie
-Themen: Alkane, Polarität, Redox
-Tage: 4
-Lernzeit pro Tag: 45 Minuten
+index.py
+DOKUMENTATION_index_neu.md
+NextStudy_Notebook.ipynb
+NextStudy_Portfolio.md
+NextStudy_Portfolio.docx
+start_nextstudy_windows.bat
+start_nextstudy_macos.command
+screenshots/nextstudy_terminal.png
 ```
 
-Ausgabe:
+`index.py` ist der lauffähige Quellcode. Die beiden Startdateien öffnen das Programm per Doppelklick im Terminal. Die anderen Dateien erklären das Projekt und zeigen die Umsetzung.
 
-```text
-Tag 1: Redox lernen und Aufgaben üben
-Tag 2: Alkane lernen und wiederholen
-Tag 3: Polarität lernen
-Tag 4: Gesamtwiederholung
-```
+Die Startdateien funktionieren so:
 
----
+- `start_nextstudy_windows.bat` startet NextStudy unter Windows.
+- `start_nextstudy_macos.command` startet NextStudy unter macOS.
 
-## 5. Projektumfang
+Beide Dateien wechseln zuerst in ihren eigenen Ordner und starten danach `index.py`. Dadurch funktioniert der Start auch dann, wenn man die Datei direkt aus dem Dateimanager öffnet.
 
-Das Projekt wird als **einzelne Python-Datei** umgesetzt.
+## Funktionen
 
-```text
-nextstudy.py
-```
-
-Dadurch bleibt das Projekt übersichtlich und kann leichter erklärt werden.
-
----
-
-## 6. Nicht Teil des Projekts
-
-Damit das Projekt unter 300 Zeilen bleibt, werden folgende Funktionen bewusst nicht eingebaut:
-
-- keine grafische Oberfläche
-- kein Login-System
-- keine Datenbank
-- kein Webserver
-- keine echte KI
-- keine Kalenderintegration
-- keine Verwaltung mehrerer Nutzer
-- keine komplexe App-Struktur mit vielen Dateien
-
----
-
-## 7. Geplante Funktionen
-
-| Nr. | Funktion | Beschreibung |
+| Nr. | Funktion | Was sie macht |
 |---:|---|---|
-| 1 | Lernprojekt erstellen | Nutzer gibt Fach, Themen, Tage und Lernzeit ein |
-| 2 | Schwierigkeit festlegen | Jedes Thema bekommt leicht, mittel oder schwer |
-| 3 | Lernplan generieren | Programm verteilt Themen automatisch auf Tage |
-| 4 | Lernplan anzeigen | Plan wird übersichtlich in der Konsole ausgegeben |
-| 5 | Aufgabe erledigen | Nutzer kann eine Lerneinheit als abgeschlossen markieren |
-| 6 | Fortschritt anzeigen | Programm berechnet erledigte Aufgaben in Prozent |
-| 7 | Speichern | Lernplan wird optional als JSON gespeichert |
-| 8 | Laden | Gespeicherter Lernplan kann wieder geladen werden |
+| 1 | Neues Lernprojekt erstellen | fragt Fach, Themen, Schwierigkeit, Tage und Lernzeit ab |
+| 2 | Lernplan anzeigen | zeigt alle geplanten Lerneinheiten im Terminal |
+| 3 | Aufgabe erledigen | markiert eine Aufgabe als abgeschlossen |
+| 4 | Statistik anzeigen | zeigt Fortschritt, offene Aufgaben und Lernzeit |
+| 5 | Tipp des Tages anzeigen | gibt einen zufälligen Lerntipp aus |
+| 6 | Lernplan speichern | speichert den Plan als JSON-Datei |
+| 7 | Lernplan laden | lädt einen gespeicherten Plan |
+| 8 | TXT exportieren | schreibt den Plan in eine normale Textdatei |
+| 9 | Beenden | beendet das Programm |
 
----
-
-## 8. Hauptmenü
+## Hauptmenü
 
 ```text
 ========================
-     NEXTSTUDY LITE
+       NEXTSTUDY
 ========================
-
 1. Neues Lernprojekt erstellen
 2. Lernplan anzeigen
 3. Aufgabe als erledigt markieren
-4. Fortschritt anzeigen
-5. Lernplan speichern
-6. Lernplan laden
-7. Beenden
+4. Statistik anzeigen
+5. Tipp des Tages anzeigen
+6. Lernplan speichern
+7. Lernplan laden
+8. Lernplan als TXT exportieren
+9. Beenden
 ```
 
----
+## Datenmodell
 
-## 9. Programmablauf
+Das Programm arbeitet mit zwei eigenen Klassen:
 
-1. Das Programm startet.
-2. Das Hauptmenü wird angezeigt.
-3. Der Nutzer wählt eine Aktion.
-4. Beim Erstellen eines Lernprojekts werden Fach, Themen, Schwierigkeit, Lerntage und Lernzeit abgefragt.
-5. Das Programm erstellt automatisch einen Lernplan.
-6. Der Nutzer kann den Plan anzeigen.
-7. Der Nutzer kann Aufgaben als erledigt markieren.
-8. Der Fortschritt wird berechnet.
-9. Der Plan kann gespeichert oder geladen werden.
-10. Das Programm wird beendet.
-
----
-
-## 10. Python-Grundstrukturen
-
-Das Projekt erfüllt die geforderten Grundstrukturen.
-
-| Grundstruktur | Umsetzung in NextStudy Lite |
+| Klasse | Bedeutung |
 |---|---|
-| Variablen | Fach, Tage, Lernzeit, Status |
-| Input/Output | `input()` und `print()` |
-| Bedingungen | `if`, `elif`, `else` im Menü und bei Eingabeprüfungen |
-| Schleifen | `while` für Hauptmenü, `for` für Themen und Plan |
-| Funktionen | Plan erstellen, anzeigen, speichern, laden |
-| Klassen | `Thema` und `Lerneinheit` |
-| Bibliotheken | `json` zum Speichern und Laden |
-| Listen | Themenliste und Lernplanliste |
-| Dictionaries | Umwandlung in speicherbare JSON-Daten |
+| `Thema` | speichert ein Lernthema mit Schwierigkeit und Gewichtung |
+| `Lerneinheit` | speichert eine Aufgabe für einen bestimmten Tag |
 
----
+Der Lernplan ist am Ende eine Liste aus mehreren `Lerneinheit`-Objekten.
 
-## 11. Datenmodell / ERM
+Der aktuelle Programmzustand wird in `main()` in einem Dictionary namens `daten` gespeichert. Dort stehen Fach, Themen, Tage, Lernzeit und Plan. Für die Menüauswahl gibt es zusätzlich das Dictionary `aktionen`. Das ordnet Eingaben wie `"1"` oder `"2"` direkt passenden Funktionen zu.
 
-Das Datenmodell ist bewusst reduziert.  
-Es gibt nur drei zentrale Objekte:
+## Lernplan-Logik
 
-- Lernprojekt
-- Thema
-- Lerneinheit
+Die Schwierigkeit wird in eine Zahl umgewandelt:
 
-```mermaid
-erDiagram
-    LERNPROJEKT ||--o{ THEMA : besitzt
-    LERNPROJEKT ||--o{ LERNEINHEIT : erzeugt
-    THEMA ||--o{ LERNEINHEIT : wird_verplant_in
+| Schwierigkeit | Gewichtung |
+|---|---:|
+| leicht | 1 |
+| mittel | 2 |
+| schwer | 3 |
 
-    LERNPROJEKT {
-        string fach
-        int tage
-        int lernzeit_pro_tag
-    }
+Schwere Themen bekommen dadurch mehr Gewicht. Der letzte Tag wird immer für Wiederholung genutzt. Wenn mindestens vier Lerntage vorhanden sind, wird der vorletzte Tag als Prüfungsvorbereitung genutzt.
 
-    THEMA {
-        string name
-        string schwierigkeit
-        int gewichtung
-    }
+## Menülogik
 
-    LERNEINHEIT {
-        int tag
-        string thema
-        string aufgabe
-        string status
-    }
-```
-
----
-
-## 12. Architekturplan / Netzwerkplan
-
-Da NextStudy Lite lokal auf einem Rechner läuft, gibt es keinen echten Netzwerkserver.  
-Der folgende Plan zeigt die logische Programmarchitektur.
-
-```mermaid
-flowchart LR
-    User["Nutzer"] --> Console["Konsole / Terminal"]
-    Console --> Main["nextstudy.py"]
-    Main --> Logic["Lernplan-Logik"]
-    Main --> Classes["Klassen: Thema, Lerneinheit"]
-    Main --> Storage["JSON-Speicherung"]
-    Storage --> File["nextstudy_plan.json"]
-
-    subgraph LocalPC["Lokaler Rechner"]
-        Console
-        Main
-        Logic
-        Classes
-        Storage
-        File
-    end
-```
-
-### Erklärung
-
-- Der Nutzer bedient das Programm über das Terminal.
-- Die Datei `nextstudy.py` enthält die komplette Programmlogik.
-- Die Klassen speichern Themen und Lerneinheiten.
-- Die Lernplan-Logik verteilt Themen auf Tage.
-- Die JSON-Datei speichert den Lernplan dauerhaft.
-
----
-
-## 13. BPMN-ähnliches Ablaufdiagramm
-
-```mermaid
-flowchart TD
-    Start([Start]) --> Menu[Hauptmenü anzeigen]
-    Menu --> Choice{Auswahl treffen}
-
-    Choice -->|1 Neues Projekt| Fach[Fach eingeben]
-    Fach --> Themen[Themen eingeben]
-    Themen --> Schwierigkeit[Schwierigkeit festlegen]
-    Schwierigkeit --> Tage[Lerntage eingeben]
-    Tage --> Lernzeit[Lernzeit pro Tag eingeben]
-    Lernzeit --> Generate[Lernplan generieren]
-    Generate --> Menu
-
-    Choice -->|2 Plan anzeigen| Show[Lernplan ausgeben]
-    Show --> Menu
-
-    Choice -->|3 Aufgabe erledigen| Select[Lerneinheit auswählen]
-    Select --> Done[Status auf abgeschlossen setzen]
-    Done --> Menu
-
-    Choice -->|4 Fortschritt| Progress[Fortschritt berechnen]
-    Progress --> Menu
-
-    Choice -->|5 Speichern| Save[Als JSON speichern]
-    Save --> Menu
-
-    Choice -->|6 Laden| Load[JSON laden]
-    Load --> Menu
-
-    Choice -->|7 Beenden| End([Ende])
-```
-
----
-
-## 14. Geplante Klassen
-
-### 14.1 Klasse `Thema`
-
-Die Klasse `Thema` speichert ein einzelnes Lernthema.
-
-Attribute:
-
-- `name`
-- `schwierigkeit`
-- `gewichtung`
-
-Beispiel:
+Die alte Lösung wäre eine längere `if/elif/else`-Kette gewesen. In der aktuellen Version wird das Menü über eine Dispatch-Tabelle gesteuert:
 
 ```python
-class Thema:
-    def __init__(self, name, schwierigkeit):
-        self.name = name
-        self.schwierigkeit = schwierigkeit
-        self.gewichtung = self.berechne_gewichtung()
-
-    def berechne_gewichtung(self):
-        if self.schwierigkeit == "leicht":
-            return 1
-        elif self.schwierigkeit == "mittel":
-            return 2
-        elif self.schwierigkeit == "schwer":
-            return 3
-        return 1
-```
-
----
-
-### 14.2 Klasse `Lerneinheit`
-
-Die Klasse `Lerneinheit` speichert eine Aufgabe für einen bestimmten Lerntag.
-
-Attribute:
-
-- `tag`
-- `thema`
-- `aufgabe`
-- `status`
-
-Beispiel:
-
-```python
-class Lerneinheit:
-    def __init__(self, tag, thema, aufgabe):
-        self.tag = tag
-        self.thema = thema
-        self.aufgabe = aufgabe
-        self.status = "offen"
-```
-
----
-
-## 15. Lernplan-Logik
-
-Die Lernplan-Logik soll einfach und erklärbar bleiben.
-
-Grundidee:
-
-1. Themen werden nach Schwierigkeit sortiert.
-2. Schwere Themen kommen zuerst.
-3. Themen werden auf die verfügbaren Tage verteilt.
-4. Wenn mehr Tage als Themen vorhanden sind, werden Wiederholungen eingefügt.
-5. Der letzte Tag kann als Wiederholungstag genutzt werden.
-
-Beispiel:
-
-| Thema | Schwierigkeit | Gewichtung |
-|---|---|---:|
-| Redox | schwer | 3 |
-| Alkane | mittel | 2 |
-| Polarität | leicht | 1 |
-
-Daraus wird:
-
-```text
-Tag 1: Redox lernen und Aufgaben üben
-Tag 2: Alkane lernen und wiederholen
-Tag 3: Polarität lernen
-Tag 4: Gesamtwiederholung
-```
-
----
-
-## 16. Speicherformat JSON
-
-Der Lernplan kann in einer JSON-Datei gespeichert werden.
-
-Dateiname:
-
-```text
-nextstudy_plan.json
-```
-
-Beispielstruktur:
-
-```json
-{
-  "fach": "Chemie",
-  "tage": 4,
-  "lernzeit": 45,
-  "plan": [
-    {
-      "tag": 1,
-      "thema": "Redox",
-      "aufgabe": "Redox lernen und Aufgaben üben",
-      "status": "offen"
-    },
-    {
-      "tag": 2,
-      "thema": "Alkane",
-      "aufgabe": "Alkane lernen und wiederholen",
-      "status": "abgeschlossen"
-    }
-  ]
+aktionen = {
+    "1": neues_projekt,
+    "2": lambda: plan_anzeigen(daten["fach"], daten["plan"]),
 }
 ```
 
----
+Im Dictionary steht jeweils eine Funktionsreferenz. Die Funktion wird also nicht sofort ausgeführt, sondern erst später mit `aktion()`. Dadurch bleibt das Menü kürzer und besser lesbar.
 
-## 17. Eingabeprüfung
+## Speicherung
 
-Das Programm soll einfache Fehler abfangen.
+Der Lernplan wird in `nextstudy_plan.json` gespeichert. Dort stehen Fach, Themen, Lerntage, Lernzeit und alle geplanten Aufgaben. Für eine lesbare Ausgabe gibt es zusätzlich `nextstudy_export.txt`.
 
-Beispiele:
+## Sicherheits-Backup
 
-| Fehler | Reaktion |
-|---|---|
-| Nutzer gibt keine Themen ein | Programm fragt erneut |
-| Tage kleiner als 1 | Programm gibt Fehlermeldung aus |
-| falsche Schwierigkeit | Standardwert `mittel` oder erneute Eingabe |
-| ungültige Menüauswahl | Hinweis und zurück zum Menü |
+Das Programm soll nicht direkt abstürzen, wenn etwas schiefgeht. Deshalb werden mehrere Fehler abgefangen:
 
----
+- falsche Zahlen-Eingaben,
+- leere Texteingaben,
+- ungültige Menüauswahl,
+- fehlende Speicherdatei,
+- beschädigte JSON-Datei,
+- Fehler beim Speichern oder Exportieren,
+- unerwartete Fehler in einer Menüaktion.
 
-## 18. Beispielausgabe
+Wenn so ein Fehler passiert, zeigt das Programm eine verständliche Meldung und kehrt danach zum Menü zurück. Bei `9` wird NextStudy beendet. Danach ist man wieder im normalen Terminal, deshalb gehört eine spätere Eingabe nicht mehr zum Programm.
 
-```text
-Lernplan für Chemie
+## Was nicht eingebaut wurde
 
-Tag 1:
-Thema: Redox
-Aufgabe: Redox lernen und Aufgaben üben
-Status: offen
-
-Tag 2:
-Thema: Alkane
-Aufgabe: Alkane lernen und wiederholen
-Status: abgeschlossen
-
-Tag 3:
-Thema: Polarität
-Aufgabe: Polarität lernen
-Status: offen
-
-Tag 4:
-Thema: Wiederholung
-Aufgabe: Alle Themen wiederholen und Selbsttest machen
-Status: offen
-```
-
----
-
-## 19. Fortschrittsberechnung
-
-Der Fortschritt wird aus erledigten Aufgaben und allen Aufgaben berechnet.
-
-Formel:
-
-```text
-Fortschritt = erledigte Aufgaben / alle Aufgaben * 100
-```
-
-Beispiel:
-
-```text
-Erledigt: 1 von 4
-Fortschritt: 25 %
-```
-
----
-
-## 20. Geschätzte Zeilenanzahl
-
-| Bereich | Geschätzte Zeilen |
-|---|---:|
-| Import + globale Variablen | 5–10 |
-| Klassen | 35–50 |
-| Eingabefunktionen | 40–55 |
-| Lernplan erstellen | 30–45 |
-| Plan anzeigen | 20–30 |
-| Fortschritt | 15–25 |
-| Speichern/Laden | 30–40 |
-| Hauptmenü | 45–60 |
-| **Gesamt** | **220–290** |
-
-Damit bleibt das Projekt unter der maximalen Grenze von 300 Zeilen.
-
----
-
-## 21. Präsentation der Projektidee
-
-### Kurzer Vorstellungstext
-
-> Unser Projekt heißt NextStudy Lite.  
-> Es ist ein Python-Programm, das Schülern und Auszubildenden hilft, ihren Lernstoff besser zu organisieren.  
-> Der Nutzer gibt ein Fach, mehrere Themen, die Schwierigkeit der Themen, die Anzahl der Lerntage und die tägliche Lernzeit ein.  
-> Das Programm erstellt daraus automatisch einen Lernplan.  
-> Danach kann der Nutzer Aufgaben als erledigt markieren und seinen Lernfortschritt anzeigen lassen.  
-> Das Projekt ist bewusst kompakt gehalten, damit es vollständig in maximal 300 Zeilen Python-Code umgesetzt werden kann.
-
----
-
-## 22. Warum ist das Projekt geeignet?
-
-NextStudy Lite ist geeignet, weil:
-
-- es einen echten Nutzen hat
-- es nicht zu einfach wirkt
-- es trotzdem realistisch in 300 Zeilen machbar ist
-- es viele Python-Grundlagen enthält
-- es gut dokumentiert werden kann
-- der Ablauf leicht mit Diagrammen erklärbar ist
-- es für Mitschüler nachvollziehbar bleibt
-
----
-
-## 23. Mögliche Erweiterungen nur falls noch Zeilen frei sind
-
-Diese Erweiterungen sind optional und sollten nur eingebaut werden, wenn die 300-Zeilen-Grenze sicher eingehalten wird:
-
-- farbige Konsolenausgabe
-- zufälliger Motivationstext
-- Export als `.txt`
-- einfacher Wiederholungsmodus
-- automatische Sortierung nach Schwierigkeit
-
-Keine dieser Erweiterungen ist für Version 1.0 zwingend notwendig.
-
----
-
-## 24. Finale Projektdefinition
-
-**NextStudy Lite ist ein kompaktes Python-Konsolenprogramm, das automatisch einen Lernplan aus Fach, Themen, Schwierigkeit, Lerntagen und Lernzeit erstellt. Das Programm verwaltet den Fortschritt des Nutzers und kann den Lernplan optional lokal speichern.**
-
-Die Umsetzung erfolgt in einer Datei:
-
-```text
-nextstudy.py
-```
-
-Der geplante Umfang liegt bei:
-
-```text
-ca. 220–290 Zeilen Python-Code
-```
-
-Damit bleibt das Projekt innerhalb der maximal erlaubten Grenze von 300 Zeilen.
+Ich habe bewusst keine grafische Oberfläche, keinen Login, keine Datenbank und keinen Kalender eingebaut. Das hätte das Projekt unnötig groß gemacht. Für diese Version reicht die Konsole, weil man daran die Python-Grundlagen gut zeigen kann.
