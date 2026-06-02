@@ -70,15 +70,19 @@ Das Tool hilft, weil es:
 - den Plan auch nach dem Schließen wieder laden kann,
 - sich per Doppelklick über eine Startdatei öffnen lässt.
 
-## Screenshot des fertigen Programms
+## Screenshots des fertigen Programms
 
-Der Screenshot liegt hier:
+Die Screenshots liegen im Ordner `new/screenshots`. Sie zeigen die wichtigsten Programmsituationen im Terminal:
 
 ```text
 screenshots/nextstudy_terminal.png
+screenshots/nextstudy_menu.png
+screenshots/nextstudy_neues_projekt.png
+screenshots/nextstudy_lernplan.png
+screenshots/nextstudy_aufgabe_statistik.png
 ```
 
-Auf dem Screenshot sieht man das Menü, einen Beispielplan und die Statistik. Da NextStudy ein Terminalprogramm ist, zeigt ein Terminal-Screenshot das fertige Ergebnis am besten.
+Auf den Screenshots sieht man das Menü, die Eingaben für ein neues Lernprojekt, den erzeugten Beispielplan, das Erledigen einer Aufgabe, die Statistik und einen Lerntipp. Da NextStudy ein Terminalprogramm ist, zeigen Terminal-Screenshots das fertige Ergebnis am besten.
 
 ## Reflexion
 
