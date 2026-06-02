@@ -1,37 +1,22 @@
-NextStudy Lite - Lernplan für englisch
+NextStudy - Lernplan für Mathe
 ========================================
 
-Tag 1: gdfgdf
-Aufgabe: gdfgdf intensiv lernen, Aufgaben üben und Fehler notieren
+Tag 1: Test2
+Aufgabe: Test2 intensiv lernen, Aufgaben üben und Fehler notieren
 Dauer: 30 Minuten
 Status: abgeschlossen
 
-Tag 2: gdfgdf
-Aufgabe: gdfgdf intensiv lernen, Aufgaben üben und Fehler notieren
+Tag 2: Test2
+Aufgabe: Test2 intensiv lernen, Aufgaben üben und Fehler notieren
 Dauer: 30 Minuten
 Status: offen
 
-Tag 3: gdfgdf
-Aufgabe: gdfgdf intensiv lernen, Aufgaben üben und Fehler notieren
-Dauer: 30 Minuten
-Status: offen
-
-Tag 4: rtr
-Aufgabe: rtr lernen, Beispiele anschauen und Aufgaben lösen
-Dauer: 30 Minuten
-Status: offen
-
-Tag 5: rtr
-Aufgabe: rtr lernen, Beispiele anschauen und Aufgaben lösen
-Dauer: 30 Minuten
-Status: offen
-
-Tag 6: Prüfungsvorbereitung
+Tag 3: Prüfungsvorbereitung
 Aufgabe: Schwächen wiederholen, Zusammenfassung lesen und Beispielaufgaben lösen
 Dauer: 30 Minuten
 Status: offen
 
-Tag 7: Wiederholung
+Tag 4: Wiederholung
 Aufgabe: Alle Themen wiederholen, offene Fragen klären und Mini-Selbsttest machen
 Dauer: 30 Minuten
 Status: offen
